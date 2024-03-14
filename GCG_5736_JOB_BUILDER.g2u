@@ -1,0 +1,1534 @@
+Program.Sub.ScreenSU.Start
+Gui.fmJobMod..Create
+Gui.fmJobMod..Caption("Job Modification")
+Gui.fmJobMod..Size(19050,10695)
+Gui.fmJobMod..MinX(0)
+Gui.fmJobMod..MinY(0)
+Gui.fmJobMod..Position(0,0)
+Gui.fmJobMod..FontSize(16)
+Gui.fmJobMod..BackColor(12632256)
+Gui.fmJobMod..MousePointer(0)
+Gui.fmJobMod..Event(UnLoad,fmJobMod_UnLoad)
+Gui.fmJobMod.frmOpt.Create(Frame)
+Gui.fmJobMod.frmOpt.Size(4725,1665)
+Gui.fmJobMod.frmOpt.Position(12930,60)
+Gui.fmJobMod.frmOpt.Caption("Entry Type")
+Gui.fmJobMod.frmOpt.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.frmOpt.FontSize(16)
+Gui.fmJobMod.frmOpt.BackColor(12632256)
+Gui.fmJobMod.optDefect.Create(Option)
+Gui.fmJobMod.optDefect.Size(3975,510)
+Gui.fmJobMod.optDefect.Position(75,495)
+Gui.fmJobMod.optDefect.Parent("frmOpt")
+Gui.fmJobMod.optDefect.Caption("Job Defect")
+Gui.fmJobMod.optDefect.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.optDefect.FontSize(16)
+Gui.fmJobMod.optDefect.BackColor(12632256)
+Gui.fmJobMod.optWalk.Create(Option)
+Gui.fmJobMod.optWalk.Size(3990,510)
+Gui.fmJobMod.optWalk.Position(75,1035)
+Gui.fmJobMod.optWalk.Parent("frmOpt")
+Gui.fmJobMod.optWalk.Caption("Customer Walkaround")
+Gui.fmJobMod.optWalk.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.optWalk.FontSize(16)
+Gui.fmJobMod.optWalk.BackColor(12632256)
+Gui.fmJobMod.frmJob.Create(Frame)
+Gui.fmJobMod.frmJob.Size(12795,1665)
+Gui.fmJobMod.frmJob.Position(45,60)
+Gui.fmJobMod.frmJob.Caption("Work Order")
+Gui.fmJobMod.frmJob.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.frmJob.FontSize(16)
+Gui.fmJobMod.frmJob.BackColor(12632256)
+Gui.fmJobMod.lblJoblbl.Create(Label,"Job:",True,615,420,0,120,600,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblJoblbl.Parent("frmJob")
+Gui.fmJobMod.lblJobtxt.Create(Label,"",True,2100,510,0,780,555,True,0,"Bahnschrift SemiLight Condensed",18,16777215,0)
+Gui.fmJobMod.lblJobtxt.Parent("frmJob")
+Gui.fmJobMod.lblJobtxt.ForeColor(255)
+Gui.fmJobMod.lblSufflbl.Create(Label,"Suffix:",True,900,420,0,2910,600,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblSufflbl.Parent("frmJob")
+Gui.fmJobMod.lblDatetxt.Create(Label,"",True,3120,510,0,9150,555,True,0,"Bahnschrift SemiLight Condensed",18,16777215,0)
+Gui.fmJobMod.lblDatetxt.Parent("frmJob")
+Gui.fmJobMod.lblDatetxt.ForeColor(255)
+Gui.fmJobMod.lblDatelbl.Create(Label,"Date Due:",True,1455,420,0,7680,600,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblDatelbl.Parent("frmJob")
+Gui.fmJobMod.lblSufftxt.Create(Label,"",True,1530,510,0,3975,555,True,0,"Bahnschrift SemiLight Condensed",18,16777215,0)
+Gui.fmJobMod.lblSufftxt.Parent("frmJob")
+Gui.fmJobMod.lblSufftxt.ForeColor(255)
+Gui.fmJobMod.lblCustlbl.Create(Label,"Customer:",True,1320,420,0,120,1140,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblCustlbl.Parent("frmJob")
+Gui.fmJobMod.lblCusttxt.Create(Label,"",True,10545,510,0,1725,1095,True,0,"Bahnschrift SemiLight Condensed",18,16777215,0)
+Gui.fmJobMod.lblCusttxt.Parent("frmJob")
+Gui.fmJobMod.lblCusttxt.ForeColor(255)
+Gui.fmJobMod.frmEntry.Create(Frame)
+Gui.fmJobMod.frmEntry.Size(18780,2685)
+Gui.fmJobMod.frmEntry.Position(45,1755)
+Gui.fmJobMod.frmEntry.Caption("New WO Sequence Entry")
+Gui.fmJobMod.frmEntry.BackColor(12632256)
+Gui.fmJobMod.frmEntry.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.frmEntry.FontSize(16)
+Gui.fmJobMod.cboLMO.Create(ComboBox)
+Gui.fmJobMod.cboLMO.Size(1710,480)
+Gui.fmJobMod.cboLMO.Position(120,1065)
+Gui.fmJobMod.cboLMO.Parent("frmEntry")
+Gui.fmJobMod.cboLMO.FontSize(16)
+Gui.fmJobMod.cboLMO.ListIndex(2)
+Gui.fmJobMod.cboLMO.AddItem("L",0)
+Gui.fmJobMod.cboLMO.AddItem("C",1)
+Gui.fmJobMod.lblLMO.Create(Label,"Type",True,1095,420,0,120,675,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblLMO.Parent("frmEntry")
+Gui.fmJobMod.lblWC.Create(Label,"Workcenter",True,2070,420,0,1890,675,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblWC.Parent("frmEntry")
+Gui.fmJobMod.txtWC.Create(TextBox,"",True,1920,480,0,1890,1065,True,0,"Arial",16,16777215,1)
+Gui.fmJobMod.txtWC.Parent("frmEntry")
+Gui.fmJobMod.cmdWCBrws.Create(Button)
+Gui.fmJobMod.cmdWCBrws.Size(1605,720)
+Gui.fmJobMod.cmdWCBrws.Position(3855,840)
+Gui.fmJobMod.cmdWCBrws.Parent("frmEntry")
+Gui.fmJobMod.cmdWCBrws.Caption("^")
+Gui.fmJobMod.cmdWCBrws.FontSize(16)
+Gui.fmJobMod.cmdWCBrws.FontStyle(True,False,False,False,False)
+Gui.fmJobMod.cmdWCBrws.Event(Click,cmdWCBrws_Click)
+Gui.fmJobMod.cmdWCBrws.BackColor(11119017)
+Gui.fmJobMod.cmdWCBrws.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.lblDesc.Create(Label,"Discrepancy",True,2415,420,0,5565,675,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblDesc.Parent("frmEntry")
+Gui.fmJobMod.txtDesc.Create(TextBox,"",True,11445,480,0,5475,1065,True,0,"Arial",16,16777215,1)
+Gui.fmJobMod.txtDesc.Parent("frmEntry")
+Gui.fmJobMod.txtDesc.MaxLength(30)
+Gui.fmJobMod.cmdAddDisc.Create(Button)
+Gui.fmJobMod.cmdAddDisc.Size(1755,720)
+Gui.fmJobMod.cmdAddDisc.Position(16995,840)
+Gui.fmJobMod.cmdAddDisc.Parent("frmEntry")
+Gui.fmJobMod.cmdAddDisc.Caption("^")
+Gui.fmJobMod.cmdAddDisc.FontSize(16)
+Gui.fmJobMod.cmdAddDisc.FontStyle(True,False,False,False,False)
+Gui.fmJobMod.cmdAddDisc.Event(Click,OPCodeBrws)
+Gui.fmJobMod.cmdAddDisc.BackColor(11119017)
+Gui.fmJobMod.cmdAddDisc.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdAddLine.Create(Button)
+Gui.fmJobMod.cmdAddLine.Size(1800,1065)
+Gui.fmJobMod.cmdAddLine.Position(16980,1575)
+Gui.fmJobMod.cmdAddLine.Parent("frmEntry")
+Gui.fmJobMod.cmdAddLine.Caption("ADD LINE")
+Gui.fmJobMod.cmdAddLine.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdAddLine.FontSize(16)
+Gui.fmJobMod.cmdAddLine.Event(Click,cmdAddLine_Click)
+Gui.fmJobMod.cmdAddLine.BackColor(-2147483619)
+Gui.fmJobMod.cmdAddLine.Anchor(9)
+Gui.fmJobMod.txtAddlCom.Create(TextboxM)
+Gui.fmJobMod.txtAddlCom.Size(12990,1065)
+Gui.fmJobMod.txtAddlCom.Position(2115,1575)
+Gui.fmJobMod.txtAddlCom.Parent("frmEntry")
+Gui.fmJobMod.txtAddlCom.FontSize(16)
+Gui.fmJobMod.txtAddlCom.BackColor(16777215)
+Gui.fmJobMod.lblAddlComm.Create(Label,"Additional  Comments",True,1950,1065,0,120,1635,True,0,"Bahnschrift SemiLight Condensed",16,12632256,0)
+Gui.fmJobMod.lblAddlComm.Parent("frmEntry")
+Gui.fmJobMod.cmdLImgUp.Create(Button)
+Gui.fmJobMod.cmdLImgUp.Size(1800,1065)
+Gui.fmJobMod.cmdLImgUp.Position(15150,1575)
+Gui.fmJobMod.cmdLImgUp.Parent("frmEntry")
+Gui.fmJobMod.cmdLImgUp.Anchor(9)
+Gui.fmJobMod.cmdLImgUp.BackColor(16744576)
+Gui.fmJobMod.cmdLImgUp.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdLImgUp.FontSize(16)
+Gui.fmJobMod.cmdLImgUp.DefaultValue("Add Img")
+Gui.fmJobMod.cmdLImgUp.Event(Click,cmdLImgUp_Click)
+Gui.fmJobMod.cmdEditLine.Create(Button)
+Gui.fmJobMod.cmdEditLine.Size(900,1065)
+Gui.fmJobMod.cmdEditLine.Position(16980,1575)
+Gui.fmJobMod.cmdEditLine.Parent("frmEntry")
+Gui.fmJobMod.cmdEditLine.Anchor(9)
+Gui.fmJobMod.cmdEditLine.Caption("SAVE EDIT")
+Gui.fmJobMod.cmdEditLine.BackColor(-2147483635)
+Gui.fmJobMod.cmdEditLine.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdEditLine.FontSize(16)
+Gui.fmJobMod.cmdEditLine.Event(Click,cmdEditLine_Click)
+Gui.fmJobMod.cmdDelLine.Create(Button)
+Gui.fmJobMod.cmdDelLine.Size(900,1065)
+Gui.fmJobMod.cmdDelLine.Position(17880,1575)
+Gui.fmJobMod.cmdDelLine.Parent("frmEntry")
+Gui.fmJobMod.cmdDelLine.Anchor(9)
+Gui.fmJobMod.cmdDelLine.Caption("DEL LINE")
+Gui.fmJobMod.cmdDelLine.BackColor(255)
+Gui.fmJobMod.cmdDelLine.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdDelLine.FontSize(16)
+Gui.fmJobMod.cmdDelLine.Event(Click,cmdDelLine_Click)
+Gui.fmJobMod.cmdSv.Create(Button)
+Gui.fmJobMod.cmdSv.Size(2265,945)
+Gui.fmJobMod.cmdSv.Position(14235,9150)
+Gui.fmJobMod.cmdSv.Caption("SAVE AND EXIT")
+Gui.fmJobMod.cmdSv.BackColor(12648384)
+Gui.fmJobMod.cmdSv.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdSv.FontSize(16)
+Gui.fmJobMod.cmdSv.Event(Click,cmdSv_Click)
+Gui.fmJobMod.cmdSv.Anchor(10)
+Gui.fmJobMod.cmdProc.Create(Button)
+Gui.fmJobMod.cmdProc.Size(2265,945)
+Gui.fmJobMod.cmdProc.Position(16530,9150)
+Gui.fmJobMod.cmdProc.Caption("SCHEDULE JOB")
+Gui.fmJobMod.cmdProc.BackColor(12632319)
+Gui.fmJobMod.cmdProc.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdProc.FontSize(16)
+Gui.fmJobMod.cmdProc.Event(Click,cmdProc_Click)
+Gui.fmJobMod.cmdProc.Anchor(10)
+Gui.fmJobMod.GsNewLines.Create(GsGridControl)
+Gui.fmJobMod.GsNewLines.Size(18795,4860)
+Gui.fmJobMod.GsNewLines.Position(45,4455)
+Gui.fmJobMod.GsNewLines.Event(RowCellClick,GsNewLines_RowCellClick)
+Gui.fmJobMod.cmdHImgUp.Create(Button)
+Gui.fmJobMod.cmdHImgUp.Size(1080,1485)
+Gui.fmJobMod.cmdHImgUp.Position(17700,240)
+Gui.fmJobMod.cmdHImgUp.BackColor(16744576)
+Gui.fmJobMod.cmdHImgUp.FontName("Bahnschrift SemiLight Condensed")
+Gui.fmJobMod.cmdHImgUp.FontSize(16)
+Gui.fmJobMod.cmdHImgUp.Event(Click,cmdHImgUp_Click)
+Gui.fmJobMod.cmdHImgUp.DefaultValue("Add Img")
+Gui.fmEmailMX..Create
+Gui.fmEmailMX..Caption("Department Email Maintenance")
+Gui.fmEmailMX..Size(9960,2400)
+Gui.fmEmailMX..MinX(0)
+Gui.fmEmailMX..MinY(0)
+Gui.fmEmailMX..Position(0,0)
+Gui.fmEmailMX..BackColor(-2147483633)
+Gui.fmEmailMX..MousePointer(0)
+Gui.fmEmailMX..Event(UnLoad,fmEmailMX_UnLoad)
+Gui.fmEmailMX.GsEmails.Create(GsGridControl)
+Gui.fmEmailMX.GsEmails.Size(9735,1830)
+Gui.fmEmailMX.GsEmails.Position(0,0)
+Gui.fmEmailMX.GsEmails.Event(CellValueChanged,GsEmails_CellValueChanged)
+Gui.fmEmailMX.GsEmails.Anchor(15)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+V.Global.sWO.Declare
+V.Global.sType.Declare
+V.Global.sKey.Declare
+V.Global.sSEQ.Declare
+V.Global.sDateDue.Declare
+Program.External.Include.Library("6008.lib")
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.Try
+'TJS, October 2019
+'Customer: Life Line Emergency Vehicles
+'Business Case: The company needs a way to record and report on issues found during the quality inspection sequence. Their products go through the production line and the last step is the quality step. Currently, during this step they identify any issues and make notes in a spread sheet and notify the corresponding supervisor to come and make the necessary fixes. They want to be able to record this in global shop and automate the notification to the supervisor. They also need a way to mark their tasks as complete and not allow the rework sequence to be closed until all the tasks are being signed off by quality.
+'Solution: We will enable this by allowing the quality inspector to select the type of repair needed and add notes to it. He can add multiple types sequentially and add notes to each type. We will allow for the administrator to assign maintain the different types of repairs and the supervisor contact information.  The employees can bring this up on the rework sequence and add their notes to it as well. They can sign off on their assigned tasks and once all the assigned tasks are signed off the quality inspector will be notified. The quality inspector can open any of the signed off sequence and add additional notes to the repair type in case there is a need for additional rework. Once the inspector signs off on the sequence, they can close the rework sequence.
+'HOOKS: 15340(Employee Master Populate), 15832 (GUI OLS002 Script 1 Hook),15790 (GUI OLS002 Populate Hook)
+'Passed variables: 000236 (Employee Master Comment 1 Label),009993 (GUI Employee Number), 000048 (GUI OLS002 Script 1 Button), AUX001 (GUI OLS002 BDF)
+
+
+V.Local.sSQL.Declare
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("select COMMENTS_1 from V_EMPLOYEE_MSTR where RTRIM(EMPLOYEE) = '{0}'",V.Passed.009993,V.Local.sSQL)
+
+F.ODBC.Connection!Conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.SelectCase(V.Caller.Hook)
+'Verify employee is authorized to use screen (Employee Master Comments 1 set to "Y")
+	F.Intrinsic.Control.Case(15340)
+		V.Passed.000236.Set("Inspector?")
+	F.Intrinsic.Control.Case(15832)
+		F.Intrinsic.Control.If(V.Local.sSQL.Trim,=,"Y")
+			F.Intrinsic.Control.CallSub(Data)
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Case(15790)
+		F.Intrinsic.Control.If(V.Local.sSQL.Trim,=,"Y")
+			V.Passed.000048.Set("Dsc Rpt")
+			F.Intrinsic.Variable.SetProperty("000048","BC",V.Color.LtGreen)
+			F.Intrinsic.Variable.SetProperty("000048","FC",V.Color.Green)
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.Else
+			F.Intrinsic.Control.End
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.CaseElse
+		F.Intrinsic.Control.CallSub(EmailMX)
+F.Intrinsic.Control.EndSelect
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Main.End
+
+Program.Sub.Data.Start
+F.Intrinsic.Control.Try
+V.Local.sBDF.Declare
+V.Local.sBDF.Set(V.Passed.AUX001)
+V.Local.sString.Declare
+V.Local.sData.Declare
+V.Local.sFixColNames.Declare
+V.Local.sTempPath.Declare
+V.Local.sTempPath.Set(V.Caller.LocalGSSTempDir)
+V.Local.iRet.Declare
+V.Local.sWO.Declare
+V.Local.sWOJoin.Declare
+V.Local.sSQL.Declare
+
+'Get the path to the local temp folder by stripping "\GSS" from the path
+F.Intrinsic.String.TrimCharR(V.Local.sTempPath,"\",V.Local.sTempPath)
+F.Intrinsic.String.TrimCharR(V.Local.sTempPath,"S",V.Local.sTempPath)
+F.Intrinsic.String.TrimCharR(V.Local.sTempPath,"G",V.Local.sTempPath)
+F.Intrinsic.String.Build("{0}{1}",V.Local.sTempPath,V.Local.sBDF,V.Local.sString)
+F.Intrinsic.File.FileToString(V.Local.sString,V.Local.sString)
+F.Intrinsic.String.Split(V.Local.sString,V.Ambient.NewLine,V.Local.sString)
+'Pull in BDF temp file and process it
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+'Remove the "/" from W/O and W/C
+F.Intrinsic.String.Split(V.Local.sString(0),"|~|",V.Local.sFixColNames)
+V.Local.sFixColNames(0).Set("WO")
+V.Local.sFixColNames(2).Set("WC")
+F.Intrinsic.String.Join(V.Local.sFixColNames,"*!*",V.Local.sFixColNames)
+V.Local.sFixColNames.RedimPreserve(0,0)
+'Clean up the sString variable
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,0,V.Local.sString)
+F.Intrinsic.Control.If(V.Local.sString(V.Local.sString.UBound).Trim,=,"")
+	F.Intrinsic.Variable.RemoveArrayElementByOrdinal(V.Local.sString,V.Local.sString.UBound,V.Local.sString)
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Join(V.Local.sString,V.Ambient.NewLine,V.Local.sData)
+V.Local.sString.Redim(0,0)
+'Build DataTable and filtered dataview from BDF data
+F.Intrinsic.String.Replace(V.Local.sData,"|~|","*!*",V.Local.sData)
+F.Data.DataTable.CreateFromString("dtBDF",V.Local.sData,V.Local.sFixColNames,"STRING*!*STRING*!*STRING*!*STRING*!*STRING*!*STRING*!*LONG*!*LONG*!*LONG*!*STRING","*!*",V.Ambient.NewLine,True)
+F.Data.DataView.Create("dtBDF","dvBDFCheck",22,"Selected = 'Y'","")
+'Verify that the DataView only has one line, indicating the user only selected one job
+F.Intrinsic.Control.If(V.DataView.dtBDF!dvBDFCheck.RowCount,<,1)
+	F.Intrinsic.UI.Msgbox("Please select a work order", "Error",V.Local.iRet)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.ElseIf(V.DataView.dtBDF!dvBDFCheck.RowCount,>,1)
+	F.Intrinsic.UI.Msgbox("Please select only the work order you are inspecting", "Error",V.Local.iRet)
+	F.Intrinsic.Control.End
+F.Intrinsic.Control.EndIf
+'Create filtered DataTable
+F.Data.DataView.ToDataTable("dtBDF","dvBDFCheck","dtBDFFiltered",True)
+'Split the WO+Suffix to populate individual fields on the form.
+V.Local.sWO.Set(V.DataTable.dtBDFFiltered(0).WO!FieldValTrim)
+F.Intrinsic.String.Split(V.Local.sWO,"-",V.Local.sWO)
+F.Intrinsic.String.Build("{0}{1}",V.Local.sWO(0),V.Local.sWO(1),V.Local.sWOJoin)
+V.Global.sWO.Set(V.Local.sWOJoin)
+'Setup additional columns to dictionary fill the customer name and the due date
+F.Data.DataTable.AddColumn("dtBDFFiltered","DATE_DUE","Date")
+F.Data.DataTable.AddColumn("dtBDFFiltered","NAME_CUSTOMER","String")
+F.Data.DataTable.AddColumn("dtBDFFiltered","Job","String",V.Local.sWO(0).Trim)
+F.Data.DataTable.AddColumn("dtBDFFiltered","Suffix","String",V.Local.sWO(1).Trim)
+F.Data.DataTable.AddExpressionColumn("dtBDFFiltered","JS","String","Job+Suffix")
+'Build date due dictionary
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select RTrim(JOB)+RTrim(SUFFIX) as JS,DATE_DUE from V_JOB_HEADER where JOB = '{0}' and SUFFIX = '{1}'",V.Local.sWO(0).Trim,V.Local.sWO(1).Trim,V.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("dictDDue","conts",V.Local.sSQL)
+F.Data.Dictionary.SetDefaultReturn("dictDDue",1/1/1900)
+F.Data.DataTable.FillFromDictionary("dtBDFFiltered","dictDDue","JS","DATE_DUE")
+F.Data.Dictionary.Close("dictDDue")
+'Build customer name dictionary
+F.Intrinsic.String.Build("Select RTrim(A.JOB)+RTrim(A.SUFFIX) as JS,B.NAME_CUSTOMER from V_JOB_HEADER A LEFT JOIN V_CUSTOMER_MASTER B ON B.CUSTOMER = A.CUSTOMER where RTRim(A.JOB) = '{0}' and RTRim(A.SUFFIX) = '{1}'",V.Local.sWO(0).Trim,V.Local.sWO(1).Trim,V.Local.sSQL)
+F.Data.Dictionary.CreateFromSQL("dictCust","conts",V.Local.sSQL)
+F.Data.DataTable.FillFromDictionary("dtBDFFiltered","dictCust","JS","NAME_CUSTOMER")
+F.Data.Dictionary.Close("dictCust")
+'SetDefaultValue did not work.  Replacing any empty customer name field with "No Customer"
+F.Intrinsic.Control.If(V.DataTable.dtBDFFiltered(0).NAME_CUSTOMER!FieldValTrim,=,"")
+	F.Data.DataTable.SetValue("dtBDFFiltered",0,"NAME_CUSTOMER","No Customer")
+F.Intrinsic.Control.EndIf
+F.ODBC.Connection!conts.Close
+
+'Populate the fields on the form
+Gui.fmJobMod.lblJobtxt.Caption(V.Local.sWO(0))
+Gui.fmJobMod.lblSufftxt.Caption(V.Local.sWO(1))
+Gui.fmJobMod.lblCusttxt.Caption(V.DataTable.dtBDFFiltered(0).NAME_CUSTOMER!FieldValTrim)
+Gui.fmJobMod.lblDatetxt.Caption(V.DataTable.dtBDFFiltered(0).DATE_DUE!FieldValTrim)
+
+V.Global.sDateDue.Set(V.DataTable.dtBDFFiltered(0).DATE_DUE!FieldValTrim)
+
+F.Data.DataTable.Close("dtBDF")
+F.Data.DataTable.Close("dtBDFFiltered")
+
+F.Intrinsic.Control.CallSub(GridData,"Job",V.Local.sWO(0),"Suffix",V.Local.sWO(1))
+F.Intrinsic.Control.CallSub(SetIcon)
+F.Intrinsic.Control.CallSub(DocIcon)
+
+Gui.fmJobMod..AlwaysOnTop(True)
+Gui.fmJobMod..Show
+Gui.fmJobMod..WindowState(2)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Data.End
+
+Program.Sub.GridData.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+
+V.Local.sJob.Set(V.Args.Job)
+V.Local.sSuffix.Set(V.Args.Suffix)
+'Pulling any lines from the job builder audit table
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select * from GCG_5736_JOB_BUILDER where JOB = '{0}' and SUFFIX = '{1}' and SCHEDULED = '0' order by SEQUENCE",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+F.Data.DataTable.CreateFromSQL("dtNewLines","conts",V.Local.sSQL,True)
+
+F.Intrinsic.Control.If(V.DataTable.dtNewLines.RowCount,<,1)
+	F.Data.DataTable.AddRow("dtNewLines","JOB",V.Local.sJob.Trim,"SUFFIX",V.Local.sSuffix.Trim,"SEQUENCE","","LMO","","PART","","DESCRIPTION","","TEXT","")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.CallSub(GridFormat)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GridData.End
+
+Program.Sub.GridFormat.Start
+F.Intrinsic.Control.Try
+V.Local.iCnt.Declare
+
+'Creating and formatting gridview
+Gui.fmJobMod.GsNewLines.AddGridviewFromDatatable("gvNewLines","dtNewLines")
+Gui.fmJobMod.GsNewLines.MainView("gvNewLines")
+
+Gui.fmJobMod.GsNewLines.SuspendLayout
+
+Gui.fmJobMod.GsNewLines.SetGridviewProperty("gvNewLines","OptionsSelectionEnableAppearanceFocusedRow",False)
+Gui.fmJobMod.GsNewLines.SetGridviewProperty("gvNewLines","OptionsViewRowAutoHeight",True)
+'Gui.fmJobMod.GsNewLines.SetGridviewProperty("gvNewLines","OptionsViewColumnAutoWidth",True)
+
+'F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtNewLines.RowCount--,1)
+'	Gui.fmJobMod.GsNewLines.SetRowAppearance("gvNewLines",V.Local.iCnt,"FontSize",16)
+'F.Intrinsic.Control.Next(V.Local.iCnt)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","USERID","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_ENTERED","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_SCHEDULED","CellFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED_BY","CellFontSize",16)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","USERID","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_ENTERED","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_SCHEDULED","CellWordWrap","Wrap")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED_BY","CellWordWrap","Wrap")
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","USERID","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_ENTERED","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_SCHEDULED","Visible",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED_BY","Visible",False)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","USERID","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_ENTERED","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DATE_SCHEDULED","AllowShowHide",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SCHEDULED_BY","AllowShowHide",False)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","HeaderFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","HeaderFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","HeaderFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","HeaderFontSize",16)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","HeaderFontSize",16)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","HeaderFontUnderline",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","HeaderFontUnderline",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","HeaderFontUnderline",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","HeaderFontUnderline",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","HeaderFontUnderline",True)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","HeaderBackColor",12632256)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","HeaderBackColor",12632256)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","HeaderBackColor",12632256)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","HeaderBackColor",12632256)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","HeaderBackColor",12632256)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","Caption","Seq")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","Caption","Type")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","Caption","Discrepancy")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","Caption","Additional Comments")
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","Caption","Workcenter")
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","Width",25)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","Width",25)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","Width",110)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","Width",150)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","Width",50)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","ReadOnly",True)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","ReadOnly",True)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","AllowEdit",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","AllowEdit",False)
+
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","JOB","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SUFFIX","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","SEQUENCE","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","LMO","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","DESCRIPTION","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","Text","AllowFocus",False)
+Gui.fmJobMod.GsNewLines.SetColumnProperty("gvNewLines","PART","AllowFocus",False)
+
+Gui.fmJobMod.GsNewLines.ResumeLayout
+
+F.Data.DataTable.Close("dtNewLines")
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GridFormat.End
+
+Program.Sub.cmdAddLine_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sSEQ.Declare
+V.Local.sLMO.Declare
+V.Local.sWC.Declare
+V.Local.sDisc.Declare
+V.Local.sComments.Declare
+V.Local.bOptDefect.Declare
+V.Local.bOptWalk.Declare
+V.Local.sCallingSub.Declare
+
+V.Local.bOptDefect.Set(V.Screen.fmJobMod!optDefect.CheckedAsBoolean)
+V.Local.bOptWalk.Set(V.Screen.fmJobMod!optWalk.CheckedAsBoolean)
+
+V.Local.sJob.Set(V.Screen.fmJobMod!lblJobtxt.Caption)
+V.Local.sSuffix.Set(V.Screen.fmJobMod!lblSufftxt.Caption)
+V.Local.sLMO.Set(V.Screen.fmJobMod!cboLMO.Caption)
+V.Local.sWC.Set(V.Screen.fmJobMod!txtWC.Caption)
+V.Local.sDisc.Set(V.Screen.fmJobMod!txtDesc.Caption)
+V.Local.sComments.Set(V.Screen.fmJobMod!txtAddlCom.Caption)
+F.Intrinsic.Control.If(V.Args.sCallingSub.Exists)
+	V.Local.sCallingSub.Set(V.Args.sCallingSub)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,1)
+	F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+
+'Prevent entry without all controls completed
+F.Intrinsic.Control.If(V.Local.bOptDefect,=,False,AND,V.Local.bOptWalk,=,False)
+	F.Intrinsic.UI.Msgbox("Please select "Job Defect" or "Customer Walkaround"","Please select an Entry Type")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+	
+F.Intrinsic.Control.ElseIf(V.Local.bOptDefect,=,True)
+	F.Intrinsic.Control.If(V.Local.sLMO.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.ElseIf(V.Local.sLMO.Trim,<>,L,AND,V.Local.sLMO.Trim,<>,C)
+		F.Intrinsic.UI.Msgbox("Please select a valid type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.sWC.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a workcenter","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select MACHINE from V_WORKCENTERS where MACHINE = '{0}'",V.Local.sWC.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+				F.Intrinsic.UI.Msgbox("Please select a valid workcenter","Error")
+				F.ODBC.Connection!conts.Close
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sDisc.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please enter a discrepancy","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sSQL.Redim(0,0)
+'Find and increment rework sequence  
+	F.Intrinsic.String.Build("select top 1 SEQUENCE from GCG_5736_JOB_BUILDER where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE like '9985%' order by SEQUENCE desc",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSEQ)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ like '9985%' order by SEQ desc",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSEQ)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			V.Local.sSEQ.Set("998499")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Math.Add(V.Local.sSEQ,1,V.Local.sSEQ)
+'Insert sequence to GCG_5736_JOB_BUILDER table	
+	F.Intrinsic.String.Build("Insert into GCG_5736_JOB_BUILDER (JOB,SUFFIX,SEQUENCE,LMO,PART,DESCRIPTION,TEXT,USERID,DATE_ENTERED) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSEQ.Trim,V.Local.sLMO.Trim,V.Local.sWC.Trim,v.Local.sDisc.PSQLFriendly.Trim,V.Local.sComments.PSQLFriendly.Trim,V.Passed.009993.Trim,V.Ambient.Now,V.Local.sSQL)
+'In the event this sub was called from sequence image upload (getting and setting the presumptive seq line)	
+	F.Intrinsic.Control.If(V.Args.sCallingSub.Exists)
+		F.Intrinsic.Control.If(V.Local.sCallingSub,=,"cmdLImgUp_Click")
+			F.Intrinsic.Variable.AddRV("sSEQ",V.Local.sSEQ)
+			F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.ODBC.Connection!conts.Execute(V.Local.sSQL)
+		F.ODBC.Connection!conts.Close
+		Gui.fmJobMod.cboLMO.Caption("")
+		Gui.fmJobMod.txtWC.Caption("")
+		Gui.fmJobMod.txtDesc.Caption("")
+		Gui.fmJobMod.txtAddlCom.Text("")
+		Gui.fmJobMod..ControlBox(True)
+		Gui.fmJobMod.cmdSv.Visible(True)
+		Gui.fmJobMod.cmdProc.Visible(True)
+		Gui.fmJobMod.cmdSv.Enabled(True)
+		Gui.fmJobMod.cmdProc.Enabled(True)
+		F.Intrinsic.Control.CallSub(Data)
+	F.Intrinsic.Control.EndIf
+	
+F.Intrinsic.Control.Else
+'Same as above but for Customer Walk-around (generates 9986* sequences)
+	F.Intrinsic.Control.If(V.Local.sLMO.Trim,=,"")
+		F.Intrinsic.Control.AndIf(V.Local.sLMO.Trim,<>,"L",OR,V.Local.sLMO.Trim,<>,"C")
+		F.Intrinsic.UI.Msgbox("Please select a type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.sWC.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a workcenter","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select MACHINE from V_WORKCENTERS where MACHINE = '{0}'",V.Local.sWC.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+				F.Intrinsic.UI.Msgbox("Please select a valid workcenter","Error")
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sDisc.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please enter a discrepancy","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	
+	V.Local.sSQL.Redim(0,0)
+
+	F.Intrinsic.String.Build("select top 1 SEQUENCE from GCG_5736_JOB_BUILDER where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE like '9986%' order by SEQUENCE desc",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSEQ)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("select top 1 SEQ from V_JOB_OPERATIONS where JOB = '{0}' and SUFFIX = '{1}' and SEQ like '9986%' order by SEQ desc",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSEQ)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			V.Local.sSEQ.Set("998599")
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Math.Add(V.Local.sSEQ,1,V.Local.sSEQ)
+	
+	F.Intrinsic.String.Build("Insert into GCG_5736_JOB_BUILDER (JOB,SUFFIX,SEQUENCE,LMO,PART,DESCRIPTION,TEXT,USERID,DATE_ENTERED) values('{0}','{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}')",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSEQ.Trim,V.Local.sLMO.Trim,V.Local.sWC.Trim,v.Local.sDisc.PSQLFriendly.Trim,V.Local.sComments.PSQLFriendly.Trim,V.Passed.009993.Trim,V.Ambient.Now,V.Local.sSQL)
+	
+	F.Intrinsic.Control.If(V.Args.sCallingSub.Exists)
+		F.Intrinsic.Control.If(V.Args.sCallingSub,=,"cmdLImgUp_Click")
+			F.Intrinsic.Variable.AddRV("sSEQ",V.Local.sSEQ)
+			F.ODBC.Connection!conts.Close
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.Else
+		F.ODBC.Connection!conts.Execute(V.Local.sSQL)
+		F.ODBC.Connection!conts.Close
+		Gui.fmJobMod.cboLMO.Caption("")
+		Gui.fmJobMod.txtWC.Caption("")
+		Gui.fmJobMod.txtDesc.Caption("")
+		Gui.fmJobMod.txtAddlCom.Text("")
+		Gui.fmJobMod..ControlBox(True)
+		Gui.fmJobMod.cmdSv.Visible(True)
+		Gui.fmJobMod.cmdProc.Visible(True)
+		Gui.fmJobMod.cmdSv.Enabled(True)
+		Gui.fmJobMod.cmdProc.Enabled(True)
+		F.Intrinsic.Control.CallSub(Data)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdAddLine_Click.End
+
+Program.Sub.cmdSv_Click.Start
+F.Intrinsic.Control.Try
+
+'Progress is saved by cmdAddLine_Click, however adding this as a more affirmative means of closing the form for the user.
+F.Intrinsic.Control.CallSub(fmJobMod_Unload)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdSv_Click.End
+
+Program.Sub.cmdProc_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sData.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sDate.Declare
+V.Local.sDateDue.Declare
+V.Local.sDateSched.Declare
+V.Local.sSQL.Declare
+V.Local.sYr.Declare
+V.Local.sMaxSEQ.Declare
+V.Local.sUPLOAD.Declare
+V.Local.iCNT.Declare
+V.Local.sTXTBuild.Declare
+V.Local.sfiller.Declare
+V.Local.sOp.Declare
+V.Local.sDDYr.Declare
+V.Local.sJOBCOST.Declare
+V.Local.sArray.Declare
+V.Local.sDesc.Declare
+V.Local.sParameters.Declare
+
+'To process sequences.  This will write the new sequences to the JOB_OPERATIONS table and update GCG_5736_JOB_BUILDER to reflect having been scheduled.
+V.Local.sDate.Set(V.Ambient.Date.PervasiveDate)
+F.Intrinsic.String.Split(V.Local.sDate,"-",V.Local.sDate)
+F.Intrinsic.String.Right(V.Local.sDate(0),2,V.Local.sYr)
+
+V.Local.sDateDue.Set(V.Global.sDateDue.PervasiveDate)
+F.Intrinsic.String.Split(V.Local.sDateDue,"-",V.Local.sDateDue)
+F.Intrinsic.String.Right(V.Local.sDateDue(0),2,V.Local.sDDYr)
+F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sDateDue(1),V.Local.sDateDue(2),V.Local.sDDYr,V.Local.sDateDue)
+V.Local.sDateDue.RedimPreserve(0,0)
+
+F.Intrinsic.String.Build("{0}{1}{2}",V.Local.sDate(1),V.Local.sDate(2),V.Local.sYr,V.Local.sDate)
+V.Local.sDate.RedimPreserve(0,0)
+
+V.Local.sJob.Set(V.Screen.fmJobMod!lblJobtxt.Caption)
+V.Local.sSuffix.Set(V.Screen.fmJobMod!lblSufftxt.Caption)
+V.Local.sDateSched.Set(V.Ambient.Now)
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+f.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select * from GCG_5736_JOB_BUILDER where JOB = '{0}' and SUFFIX = '{1}' and SCHEDULED = '0'",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sData)
+F.Data.DataTable.CreateFromSQL("dtProcData","conts",V.Local.sData,True)
+F.Data.DataTable.AddExpressionColumn("dtProcData","MaxSEQ","String","Max(SEQUENCE)")
+
+F.Data.DataView.Create("dtProcData","dvProcAudit",22)
+
+F.Data.DataView.ToString("dtProcData","dvProcAudit","MaxSEQ","","*!*",V.Local.sMaxSEQ)
+F.Intrinsic.String.Split(V.Local.sMaxSEQ,"*!*",V.Local.sMaxSEQ)
+
+V.Local.sMaxSEQ.RedimPreserve(0,0)
+
+F.Data.Datatable.RemoveColumn("dtProcData","MaxSEQ")
+F.Data.DataView.Create("dtProcData","dvProcComments",22,"TEXT <> ''","")
+
+F.Data.DataView.ToDataTable("dtProcData","dvProcAudit","dtAudit",True)
+F.Data.DataView.ToDataTable("dtProcData","dvProcComments","dtComments",True)
+
+F.Intrinsic.Math.Add(V.Local.sMaxSEQ,1,V.Local.sMaxSEQ)
+
+F.Data.DataTable.AddRow("dtAudit","JOB",V.Local.sJob.Trim,"SUFFIX",V.Local.sSuffix.Trim,"SEQUENCE",V.Local.sMaxSEQ,"LMO","L","PART","INSP","DESCRIPTION","Follow-up insp of rework seq","TEXT","","USERID",V.Passed.009993.Trim,"DATE_ENTERED",V.Local.sDateSched.Trim,"SCHEDULED",True,"DATE_SCHEDULED","","SCHEDULED_BY","")
+
+F.Data.DataTable.AddRow("dtProcData","JOB",V.Local.sJob.Trim,"SUFFIX",V.Local.sSuffix.Trim,"SEQUENCE",V.Local.sMaxSEQ,"LMO","L","PART","INSP","DESCRIPTION","Follow-up insp of rework seq","TEXT","","USERID",V.Passed.009993.Trim,"DATE_ENTERED",V.Local.sDateSched.Trim,"SCHEDULED",True,"DATE_SCHEDULED","","SCHEDULED_BY","")
+
+F.Data.DataTable.SetValue("dtProcData",-1,"DATE_SCHEDULED",V.Local.sDate.Trim)
+
+F.Data.DataView.Close("dtProcData","dvProcAudit")
+F.Data.DataView.Close("dtProcData","dvProcComments")
+
+F.Data.DataTable.RemoveColumn("dtProcData","TEXT")
+F.Data.DataTable.RemoveColumn("dtProcData","USERID")
+F.Data.DataTable.RemoveColumn("dtProcData","DATE_ENTERED")
+F.Data.DataTable.RemoveColumn("dtProcData","SCHEDULED")
+F.Data.DataTable.RemoveColumn("dtProcData","SCHEDULED_BY")
+
+F.Data.DataTable.RemoveColumn("dtComments","LMO")
+F.Data.DataTable.RemoveColumn("dtComments","PART")
+F.Data.DataTable.RemoveColumn("dtComments","DESCRIPTION")
+F.Data.DataTable.RemoveColumn("dtComments","USERID")
+F.Data.DataTable.RemoveColumn("dtComments","DATE_ENTERED")
+F.Data.DataTable.RemoveColumn("dtComments","SCHEDULED")
+F.Data.DataTable.RemoveColumn("dtComments","DATE_SCHEDULED")
+F.Data.DataTable.RemoveColumn("dtComments","SCHEDULED_BY")
+
+F.Data.DataTable.SetValue("dtAudit",-1,"SCHEDULED",True)
+F.Data.DataTable.SetValue("dtAudit",-1,"DATE_SCHEDULED",V.Local.sDateSched.Trim)
+F.Data.DataTable.SetValue("dtAudit",-1,"SCHEDULED_BY",V.Passed.009993.Trim)
+
+F.Data.DataView.Create("dtProcData","dvUPLJOBST",22)
+F.Data.DataView.ToString("dtProcData","dvUPLJOBST","JOB*!*SUFFIX*!*SEQUENCE*!*LMO*!*PART*!*DESCRIPTION*!*DATE_SCHEDULED","*!*",V.Ambient.NewLine,V.Local.sUPLOAD)
+
+F.Intrinsic.String.Split(V.Local.sUPLOAD,V.Ambient.NewLine,V.Local.sUPLOAD)
+F.Intrinsic.Control.For(V.Local.iCNT,0,V.Local.sUPLOAD.UBound,1)
+	V.Local.sArray.Set(V.Local.sUPLOAD(V.Local.iCNT))
+	F.Intrinsic.String.Split(V.Local.sArray,"*!*",V.Local.sArray)
+	F.Data.DataTable.AddRow("6008","WONo",V.Local.sArray(0).Trim,"Suffix",V.Local.sArray(1).Trim,"Seq",V.Local.sArray(2).Trim,"LMO",V.Local.sArray(3).Trim,"OpCode","","SetUp","","LMO",V.Local.sArray(3).Trim,"OpDesc",V.Local.sArray(5).Trim,"UM","HR","PWC",V.Local.sArray(4).Trim,"RouterNo","","RouterSeq","","SetupTime","","Unit","","Burden","","EstHrs","","StartDate",V.Local.sDate,"DueDate",V.Local.sDateDue,"OrderDate","","Rate","","SortCode","","ProjGrp","","SignoffUser","","ComplReq","","SaveBack2Rt","","Overlap","")
+F.Intrinsic.Control.Next(V.Local.iCNT)
+
+F.Intrinsic.Control.CallSub(6008,"CallWrapperType","1")
+
+F.Data.DataTable.SaveToDB("dtAudit","conts","GCG_5736_JOB_BUILDER","JOB*!*SUFFIX*!*SEQUENCE",256)
+
+F.Data.DataTable.SaveToDB("dtComments","conts","WO_SEQ_COMMENTS","JOB*!*SUFFIX*!*SEQUENCE",256,"JOB@!@WO*!*SUFFIX@!@WO_SUFFIX*!*SEQUENCE@!@WO_SEQ*!*TEXT@!@TEXT")
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.CallSub(Email)
+F.Intrinsic.Control.CallSub(Data)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdProc_Click.End
+
+Program.Sub.cmdWCBrws_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sRET.Declare
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+
+Gui.fmJobMod..AlwaysOnTop(False)
+'Bringing up the standard WC browser
+F.Intrinsic.UI.Browser(400,"",V.Local.sRET)
+
+F.Intrinsic.Control.If(v.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	Gui.fmJobMod.txtWC.Caption(V.Local.sRET)
+	F.ODBC.Connection!conts.Close
+	Gui.fmJobMod..AlwaysOnTop(True)
+F.Intrinsic.Control.Else
+	Gui.fmJobMod..AlwaysOnTop(True)
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdWCBrws_Click.End
+
+Program.Sub.OPCodeBrws.Start
+F.Intrinsic.Control.Try
+V.Local.sRET.Declare
+V.Local.sSQL.Declare
+V.Local.sLMO.Declare
+V.Local.sWC.Declare
+
+V.Local.sLMO.Set(V.Screen.fmJobMod!cboLMO.Caption)
+V.Local.sWC.Set(V.Screen.fmJobMod!txtWC.Caption)
+Gui.fmJobMod..AlwaysOnTop(False)
+
+'Custom browser to show only those OP codes that have been established for rework for specified workcenters
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sLMO.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.ElseIf(V.Local.sLMO.Trim,<>,L,AND,V.Local.sLMO.Trim,<>,C)
+		F.Intrinsic.UI.Msgbox("Please select a valid type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sWC.Trim,=,"")
+	F.Intrinsic.UI.Msgbox("Please select a workcenter","Error")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	F.Intrinsic.String.Build("Select MACHINE from V_WORKCENTERS where MACHINE = '{0}'",V.Local.sWC.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+		F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+			F.Intrinsic.UI.Msgbox("Please select a valid workcenter","Error")
+			F.ODBC.Connection!conts.Close
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select OPERATION,DESCRIPTION from V_OP_CODES where LMO = '{0}' and MACHINE = '{1}' and LEFT(OPERATION,2) = 'RW'",V.Local.sLMO.Trim,V.Local.sWC.Trim,V.Local.sSQL)
+
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sRET)
+
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+	F.Intrinsic.UI.Msgbox("Please enter discrepancy manually","No OP Codes Exist")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.UI.Browser("Please select an appropriate OP Code","conts",V.Local.sSQL,"OP CODE*!*DESCRIPTION","10*!*100",V.Local.sRET)
+
+F.Intrinsic.Control.If(v.Local.sRet.IsNotCancel)
+	F.Intrinsic.String.Split(v.Local.sRet,"*!*",v.Local.sRet)
+	Gui.fmJobMod.txtDesc.Caption(V.Local.sRET(1))
+	Gui.fmJobMod..AlwaysOnTop(True)
+	F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.Else
+	Gui.fmJobMod..AlwaysOnTop(True)
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.OPCodeBrws.End
+
+Program.Sub.GsNewLines_RowCellClick.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sData.Declare
+V.Local.sSEQLeft.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sSEQ.Declare
+V.Local.sJS.Declare
+V.Local.sRet.Declare
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,1)
+	F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.EndIf
+
+'Setting a means of modifying a sequence before processing it.  This sub repopulates the main form from gridcells for edit/delete
+F.Intrinsic.Control.If(V.Args.Column,=,"SEQUENCE",AND,V.Args.CellValue.Trim,<>,"")
+	V.Global.sSEQ.Set(V.Args.CellValue.Trim)
+F.Intrinsic.Control.Else
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+V.Local.sJob.Set(V.Screen.fmJobMod!lblJobtxt.Caption)
+V.Local.sSuffix.Set(V.Screen.fmJobMod!lblSufftxt.Caption)
+
+F.Intrinsic.String.Build("{0}{1}",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sJS)
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+f.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("{0}{1}",V.Local.sJS,V.Global.sSEQ,V.Global.sKey)
+
+F.Intrinsic.String.Build("Select * from LINK_DATA where ID = '{0}'",V.Global.sKey,V.Local.sRet)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sRet,V.Local.sRet)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+F.Intrinsic.Control.Else
+	Gui.fmJobMod.cmdLImgUp.BackColor(49152)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("Select * from GCG_5736_JOB_BUILDER where SEQUENCE = '{0}'",V.Global.sSEQ,V.Local.sSQL)
+
+F.Data.DataTable.CreateFromSQL("dtEditLine","conts",V.Local.sSQL,True)
+F.Data.DataTable.RemoveColumn("dtEditLine","SCHEDULED")
+F.Data.DataTable.RemoveColumn("dtEditLine","DATE_SCHEDULED")
+F.Data.DataTable.RemoveColumn("dtEditLine","SCHEDULED_BY")
+
+F.Data.DataView.Create("dtEditLine","dvEditLine")
+F.Data.DataView.ToString("dtEditLine","dvEditLine","LMO*!*PART*!*DESCRIPTION*!*TEXT","*!*","",V.Local.sData)
+F.Intrinsic.String.Split(V.Local.sData,"*!*",V.Local.sData)
+
+Gui.fmJobMod.cboLMO.Text(V.Local.sData(0).Trim)
+Gui.fmJobMod.txtWC.Text(V.Local.sData(1).Trim)
+Gui.fmJobMod.txtDesc.Text(V.Local.sData(2).Trim)
+Gui.fmJobMod.txtAddlCom.Text(V.Local.sData(3).Trim)
+
+F.Intrinsic.String.Left(V.Global.sSEQ,4,V.Local.sSEQLeft)
+
+F.Intrinsic.Control.If(V.Local.sSEQLeft,=,"9985")
+	Gui.fmJobMod.optDefect.Value(1)
+F.Intrinsic.Control.Else
+	Gui.fmJobMod.optWalk.Value(1)
+F.Intrinsic.Control.EndIf
+
+Gui.fmJobMod.cmdAddLine.Enabled(False)
+Gui.fmJobMod.cmdAddLine.Visible(False)
+Gui.fmJobMod.cmdEditLine.Enabled(True)
+Gui.fmJobMod.cmdEditLine.Visible(True)
+Gui.fmJobMod.cmdDelLine.Enabled(True)
+Gui.fmJobMod.cmdDelLine.Visible(True)
+
+F.Data.DataView.Close("dtEditLine","dvEditLine")
+F.Data.DataTable.Close("dtEditLine")
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsNewLines_RowCellClick.End
+
+Program.Sub.cmdEditLine_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sSEQ.Declare
+V.Local.sLMO.Declare
+V.Local.sWC.Declare
+V.Local.sDisc.Declare
+V.Local.sComments.Declare
+V.Local.bOptDefect.Declare
+V.Local.bOptWalk.Declare
+
+'Updates GCG_5736_JOB_BUILDER when lines have been edited.
+
+V.Local.bOptDefect.Set(V.Screen.fmJobMod!optDefect.CheckedAsBoolean)
+V.Local.bOptWalk.Set(V.Screen.fmJobMod!optWalk.CheckedAsBoolean)
+
+V.Local.sJob.Set(V.Screen.fmJobMod!lblJobtxt.Caption)
+V.Local.sSuffix.Set(V.Screen.fmJobMod!lblSufftxt.Caption)
+V.Local.sSEQ.Set(V.Global.sSEQ)
+V.Local.sLMO.Set(V.Screen.fmJobMod!cboLMO.Caption)
+V.Local.sWC.Set(V.Screen.fmJobMod!txtWC.Caption)
+V.Local.sDisc.Set(V.Screen.fmJobMod!txtDesc.Caption)
+V.Local.sComments.Set(V.Screen.fmJobMod!txtAddlCom.Caption)
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Local.bOptDefect,=,False,AND,V.Local.bOptWalk,=,False)
+	F.Intrinsic.UI.Msgbox("Please select "Job Defect" or "Customer Walkaround"","Please select an Entry Type")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+	
+F.Intrinsic.Control.ElseIf(V.Local.bOptDefect,=,True)
+	F.Intrinsic.Control.If(V.Local.sLMO.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.ElseIf(V.Local.sLMO.Trim,<>,L,AND,V.Local.sLMO.Trim,<>,C)
+		F.Intrinsic.UI.Msgbox("Please select a valid type(L or C)","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.sWC.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please select a workcenter","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("Select MACHINE from V_WORKCENTERS where MACHINE = '{0}'",V.Local.sWC.Trim,V.Local.sSQL)
+		F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+			F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+				F.Intrinsic.UI.Msgbox("Please select a valid workcenter","Error")
+				F.ODBC.Connection!conts.Close
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+	
+	F.Intrinsic.Control.If(V.Local.sDisc.Trim,=,"")
+		F.Intrinsic.UI.Msgbox("Please enter a discrepancy","Error")
+		F.ODBC.Connection!conts.Close
+		F.Intrinsic.Control.ExitSub
+	F.Intrinsic.Control.EndIf
+	V.Local.sSQL.Redim(0,0)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.String.Build("{0}*!*{1}*!*{2}*!*{3}*!*{4}*!*{5}*!*{6}*!*{7}*!*{8}",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSEQ.Trim,V.Local.sLMO.Trim,V.Local.sWC.Trim,V.Local.sDisc.PSQLFriendly.Trim,V.Local.sComments.PSQLFriendly.Trim,V.Passed.009993.Trim,V.Ambient.Now,V.Local.sSQL)
+
+F.Data.DataTable.CreateFromString("dtSvEdit",V.Local.sSQL,"JOB*!*SUFFIX*!*SEQUENCE*!*LMO*!*PART*!*DESCRIPTION*!*TEXT*!*USERID*!*DATE_ENTERED","String*!*String*!*String*!*String*!*String*!*String*!*String*!*String*!*String","*!*","",True)
+
+F.Data.DataTable.SaveToDB("dtSvEdit","conts","GCG_5736_JOB_BUILDER","JOB*!*SUFFIX*!*SEQUENCE",256)
+Gui.fmJobMod.cboLMO.Caption("")
+Gui.fmJobMod.txtWC.Caption("")
+Gui.fmJobMod.txtDesc.Caption("")
+Gui.fmJobMod.txtAddlCom.Text("")
+Gui.fmJobMod.cmdEditLine.Visible(False)
+Gui.fmJobMod.cmdEditLine.Enabled(False)
+Gui.fmJobMod.cmdDelLine.Visible(False)
+Gui.fmJobMod.cmdEditLine.Enabled(False)
+Gui.fmJobMod.cmdAddLine.Visible(True)
+Gui.fmJobMod.cmdAddLine.Enabled(True)
+Gui.fmJobMod..ControlBox(True)
+Gui.fmJobMod.cmdSv.Visible(True)
+Gui.fmJobMod.cmdProc.Visible(True)
+Gui.fmJobMod.cmdSv.Enabled(True)
+Gui.fmJobMod.cmdProc.Enabled(True)
+Gui.fmJobMod.cmdLImgUp.BackColor(16744576)
+
+V.Global.sSEQ.Set("")
+
+F.Data.DataTable.Close("dtSvEdit")
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.CallSub(Data)
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdEditLine_Click.End
+
+Program.Sub.cmdDelLine_Click.Start
+F.Intrinsic.Control.Try
+V.Local.sJob.Declare
+V.Local.sSuffix.Declare
+V.Local.sSEQ.Declare
+V.Local.sRet.Declare
+V.Local.sSQL.Declare
+
+'Updates GCG_5736_JOB_BUILDER when lines have been deleted.
+V.Local.sJob.Set(V.Screen.fmJobMod!lblJobtxt.Caption)
+V.Local.sSuffix.Set(V.Screen.fmJobMod!lblSufftxt.Caption)
+V.Local.sSEQ.Set(V.Global.sSEQ)
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("{0}{1}",V.Global.sWO,V.Local.sSEQ,V.Global.sKey)
+
+F.Intrinsic.String.Build("Select * from LINK_DATA where ID = '{0}'",V.Global.sKey,V.Local.sRet)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sRet,V.Local.sRet)
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+	F.Intrinsic.String.Build("delete GCG_5736_JOB_BUILDER where JOB = '{0}' and SUFFIX = '{1}' and SEQUENCE = '{2}'",V.Local.sJob.Trim,V.Local.sSuffix.Trim,V.Local.sSEQ.Trim,V.Local.sSQL)
+	F.ODBC.Connection!conts.Execute(V.Local.sSQL)
+	F.ODBC.Connection!conts.Close
+	Gui.fmJobMod.cboLMO.Caption("")
+	Gui.fmJobMod.txtWC.Caption("")
+	Gui.fmJobMod.txtDesc.Caption("")
+	Gui.fmJobMod.txtAddlCom.Text("")
+	Gui.fmJobMod.optDefect.Value(0)
+	Gui.fmJobMod.optWalk.Value(0)
+	Gui.fmJobMod.cmdEditLine.Visible(False)
+	Gui.fmJobMod.cmdEditLine.Enabled(False)
+	Gui.fmJobMod.cmdDelLine.Visible(False)
+	Gui.fmJobMod.cmdEditLine.Enabled(False)
+	Gui.fmJobMod.cmdAddLine.Visible(True)
+	Gui.fmJobMod.cmdAddLine.Enabled(True)
+	V.Global.sSEQ.Set("")
+	F.Intrinsic.Control.CallSub(Data)
+F.Intrinsic.Control.Else
+	F.Intrinsic.UI.Msgbox("Please clear existing document links before deleting this sequence","Document links exist")
+	F.ODBC.Connection!conts.Close
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdDelLine_Click.End
+
+Program.Sub.Email.Start
+F.Intrinsic.Control.Try
+V.Local.iRet.Declare
+V.Local.iCnt.Declare
+V.Local.iCnt1.Declare
+V.Local.sDept.Declare
+V.Local.sEmail.Declare
+V.Local.sRecEmail.Declare
+V.Local.sRecName.Declare
+V.Local.sSQL.Declare
+V.Local.sJSS.Declare
+V.Local.sDesc.Declare
+V.Local.sText.Declare
+V.Local.sDateSched.Declare
+V.Local.sSchedBy.Declare
+V.Local.sBody.Declare
+V.Local.sBuild.Declare
+V.Local.sSubject.Declare
+V.Local.sNotification.Declare
+V.Local.bChk.Declare
+
+'Emails department heads when a rework sequence has been generated
+F.Global.Messaging.IsCourierRunning(V.Local.iRet)
+F.Intrinsic.Control.If(V.Local.iRet,=,0)
+	F.Intrinsic.UI.Msgbox("Notifications not sent", "Courier is not running")
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.AddExpressionColumn("dtAudit","PART_TRIM","String","Trim(PART)")
+F.Data.DataTable.AddColumn("dtAudit","WC_DEPT","String")
+F.Data.DataTable.AddColumn("dtAudit","USER_NAME","String")
+
+F.Data.Dictionary.CreateFromSQL("dictWC","conts","select RTRIM(MACHINE) as MACHINE,RTRIM(WC_DEPT) as WC_DEPT from WORKCENTERS")
+F.Data.DataTable.FillFromDictionary("dtAudit","dictWC","PART_TRIM","WC_DEPT")
+
+F.Data.Dictionary.CreateFromSQL("dictUserName","conts","Select RTRIM(EMPLOYEE) as EMPLOYEE,RTRIM(NAME) as NAME from V_EMPLOYEE_MSTR")
+F.Data.DataTable.FillFromDictionary("dtAudit","dictUserName","SCHEDULED_BY","USER_NAME")
+
+F.Data.DataView.Create("dtAudit","dvEmail",22)
+F.Data.DataView.ToDataTable("dtAudit","dvEmail","dtEmBuild")
+
+F.Intrinsic.Control.For(V.Local.iCnt,0,V.DataTable.dtEmBuild.RowCount--,1)
+	V.Local.sDept.Set(V.DataTable.dtEmBuild(V.Local.iCnt).WC_DEPT!FieldValTrim)
+	F.Intrinsic.String.Build("select RECIPIENT_NAME,RECIPIENT_EMAIL from GCG_5736_DEPT_EMAILS where DEPT_ID = '{0}'",V.Local.sDept,V.Local.sSQL)
+	F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sSQL,V.Local.sSQL)
+	
+	F.Intrinsic.String.Split(V.Local.sSQL,"*!*",V.Local.sSQL)
+	V.Local.sRecName.Set(V.Local.sSQL(0))
+	V.Local.sRecEmail.Set(V.Local.sSQL(1))
+	V.Local.sSQL.Redim(0,0)
+	
+	F.Intrinsic.String.Build("Rework sequence(s) have been generated for {0}",V.Local.sDept,V.Local.sSubject)
+	F.Intrinsic.String.Build("Notifications have been sent to the email on record for {0}",V.Local.sDept,V.Local.sNotification)
+	
+	F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+		F.Intrinsic.String.Build("Notification not sent to department {0} as there is no email address on file",V.Local.sDept,V.Local.sSQL)
+		F.Intrinsic.UI.Msgbox(V.Local.sSQL,"Error")
+		V.Local.bChk.Set(True)
+	F.Intrinsic.Control.ElseIf(V.Local.sRecEmail.Trim,=,"")
+		F.Intrinsic.String.Build("Notification not sent to department {0} as there is no email address on file",V.Local.sDept,V.Local.sSQL)
+		F.Intrinsic.UI.Msgbox(V.Local.sSQL,"Error")
+		V.Local.bChk.Set(True)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.Build("WC_DEPT = '{0}'",V.Local.sDept,V.Local.sDept)
+		F.Data.DataView.SetFilter("dtAudit","dvEmail",V.Local.sDept)
+		F.Data.DataView.ToString("dtAudit","dvEmail","JOB*!*SUFFIX*!*SEQUENCE*!*WC_DEPT*!*DESCRIPTION*!*TEXT*!*DATE_SCHEDULED*!*SCHEDULED_BY*!*USER_NAME","*!*",V.Ambient.NewLine,V.Local.sEmail)
+		F.Intrinsic.String.Split(V.Local.sEmail,V.Ambient.NewLine,V.Local.sEmail)
+			
+		F.Intrinsic.Control.For(V.Local.iCnt1,V.Local.sEmail.LBound,V.Local.sEmail.UBound,1)
+			F.Intrinsic.String.Split(V.Local.sEmail(V.Local.iCnt1),"*!*",V.Local.sBuild)
+			F.Intrinsic.String.Build("{10}Rework sequence {0}-{1}-{2} has been generated for Workcenter: {3}.{8}{9}Discrepancy: "{4}".{8}{9}Comments: "{5}".{8}{9}Entered by {6} on {7}{8}{8}",V.Local.sBuild(0),V.Local.sBuild(1),V.Local.sBuild(2),V.Local.sBuild(3),V.Local.sBuild(4).Trim,V.Local.sBuild(5),V.Local.sBuild(8),V.Local.sBuild(6),V.Ambient.NewLine,V.Ambient.Tab,V.Local.sBody,V.Local.sBody)
+			V.Local.sBuild.Redim(0,0)
+		F.Intrinsic.Control.Next(V.Local.iCnt1)
+	
+	F.Intrinsic.String.Build("Dear {0},{2}{2}Please review the following rework sequences.{2}{2}{1}",V.Local.sRecName,V.Local.sBody,V.Ambient.NewLine,V.Local.sbody)
+
+	F.Global.Messaging.CreateEMMessage(V.Local.sRecEmail,V.Local.sRecName,"gss@lifelineambulance.com","",V.Local.sSubject,V.Local.sBody,"")
+	F.Intrinsic.Control.EndIf
+
+	F.Intrinsic.Control.If(V.Local.bChk,=,False)
+		F.Intrinsic.UI.Msgbox(V.Local.sNotification,"Success")
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.iCnt)
+
+F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.Email.End
+
+Program.Sub.EmailMX.Start
+F.Intrinsic.Control.Try
+V.Local.sSQL.Declare
+
+'Simple maintenance program to maintain department head emails.
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.CreateFromSQL("dtDept","conts","Select DEPT_ID,DEPT_NAME from DEPARTMENTS",True)
+F.Data.DataTable.SaveToDB("dtDept","conts","GCG_5736_DEPT_EMAILS","DEPT_ID",256)
+
+F.Data.DataTable.CreateFromSQL("dtEmailMX","conts","select RTRIM(DEPT_ID) as DEPT_ID,RTRIM(DEPT_NAME) as DEPT_NAME, RTRIM(RECIPIENT_NAME) as RECIPIENT_NAME,RTRIM(RECIPIENT_EMAIL) as RECIPIENT_EMAIL from GCG_5736_DEPT_EMAILS",True)
+
+Gui.fmEmailMX.GsEmails.AddGridviewFromDatatable("gvEmailMX","dtEmailMX")
+Gui.fmEmailMX.GsEmails.MainView("gvEmailMX")
+
+Gui.fmEmailMX.GsEmails.SuspendLayout
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","HeaderFontBold",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","HeaderFontBold",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","HeaderFontBold",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","HeaderFontBold",True)
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","HeaderBackColor",V.Color.ManhattanMist)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","HeaderBackColor",V.Color.ManhattanMist)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","HeaderBackColor",V.Color.ManhattanMist)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","HeaderBackColor",V.Color.ManhattanMist)
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","Caption","Dept ID")
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","Caption","Dept Name")
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","Caption","Name")
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","Caption","Email")
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","Width",20)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","Width",50)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","Width",75)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","Width",75)
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","AllowEdit",False)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","AllowEdit",False)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","AllowEdit",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","AllowEdit",True)
+
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_ID","ReadOnly",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","DEPT_NAME","ReadOnly",True)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_NAME","ReadOnly",False)
+Gui.fmEmailMX.GsEmails.SetColumnProperty("gvEmailMX","RECIPIENT_EMAIL","ReadOnly",False)
+
+Gui.fmEmailMX.GsEmails.ResumeLayout
+
+F.Intrinsic.Control.CallSub(SetIcon)
+
+Gui.fmEmailMX..Show
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.EmailMX.End
+
+Program.Sub.GsEmails_CellValueChanged.Start
+F.Intrinsic.Control.Try
+V.Local.iRet.Declare
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,1)
+	F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.EndIf
+
+'Updates changes to GCG_5736_DEPT_EMAILS
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+f.Intrinsic.Control.EndIf
+F.Intrinsic.Control.If(V.Args.Column,=,"RECIPIENT_EMAIL")
+	F.Intrinsic.Control.If(V.Args.Value.Trim,<>,"")
+		F.Global.Messaging.IsAddressValid(V.Args.Value,V.Local.iRet)
+			F.Intrinsic.Control.If(V.Local.iRet,=,0)
+				F.Intrinsic.UI.Msgbox("Please enter a valid email address","Email address invalid")
+				F.Intrinsic.Control.ExitSub
+			F.Intrinsic.Control.EndIf
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.SaveToDB("dtEmailMX","conts","GCG_5736_DEPT_EMAILS","DEPT_ID",256)
+
+F.ODBC.Connection!conts.Close
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.GsEmails_CellValueChanged.End
+
+Program.Sub.cmdHImgUp_Click.Start
+F.Intrinsic.Control.Try
+
+'Setting type to WO Header for document linking
+V.Global.sType.Set("20")
+V.Global.sKey.Set(V.Global.sWO)
+
+F.Intrinsic.Control.CallSub(DocLink)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdHImgUp_Click.End
+
+Program.Sub.cmdLImgUp_Click.Start
+F.Intrinsic.Control.Try
+V.Global.sType.Set("25")
+V.Local.sRet.Declare
+V.Local.sSEQ.Declare
+V.Local.bSEQChk.Declare
+
+'Setting up document linking for WO sequence
+F.Intrinsic.Control.If(V.Global.sSEQ,=,"")
+	F.Intrinsic.Control.CallSub(cmdAddLine_Click,"sCallingSub","cmdLImgUp_Click")
+	F.Intrinsic.Variable.ArgExists("sSEQ",V.Local.bSEQChk)
+		F.Intrinsic.Control.If(V.Local.bSEQChk,=,False)
+			F.Intrinsic.Control.ExitSub
+		F.Intrinsic.Control.Else
+				V.Local.sSEQ.Set(V.Args.sSEQ.Trim)
+		F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Else
+	V.Local.sSEQ.Set(V.Global.sSEQ)
+F.Intrinsic.Control.EndIf
+
+'Locking out controls to ensure the main form is not closed before committing the sequence
+Gui.fmJobMod..ControlBox(False)
+Gui.fmJobMod.cmdSv.Visible(False)
+Gui.fmJobMod.cmdProc.Visible(False)
+Gui.fmJobMod.cmdSv.Enabled(False)
+Gui.fmJobMod.cmdProc.Enabled(False)
+
+F.Intrinsic.Control.If(V.Local.sSEQ.Trim,<>,"")
+	F.Intrinsic.String.Build("{0}{1}",V.Global.sWO,V.Local.sSEQ,V.Global.sKey)
+	F.Intrinsic.Control.CallSub(DocLink)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select * from LINK_DATA where ID = '{0}'",V.Global.sKey,V.Local.sRet)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sRet,V.Local.sRet)
+F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+	Gui.fmJobMod..ControlBox(True)
+	Gui.fmJobMod.cmdSv.Visible(True)
+	Gui.fmJobMod.cmdProc.Visible(True)
+	Gui.fmJobMod.cmdSv.Enabled(True)
+	Gui.fmJobMod.cmdProc.Enabled(True)
+	Gui.fmJobMod.cmdLImgUp.BackColor(16744576)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.Else
+	Gui.fmJobMod..ControlBox(False)
+	Gui.fmJobMod.cmdSv.Visible(False)
+	Gui.fmJobMod.cmdProc.Visible(False)
+	Gui.fmJobMod.cmdSv.Enabled(False)
+	Gui.fmJobMod.cmdProc.Enabled(False)
+	F.Intrinsic.Control.ExitSub
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.cmdLImgUp_Click.End
+
+Program.Sub.DocLink.Start
+F.Intrinsic.Control.Try
+V.Local.sType.Declare
+V.Local.sKey.Declare
+V.Local.iRef.Declare
+V.Local.sDesc.Declare
+V.Local.sDocContPath.Declare
+V.Local.sRet.Declare
+
+'Setting document control link reference
+V.Local.sType.Set(V.Global.sType)
+V.Local.sKey.Set(V.Global.sKey)
+
+Gui.fmJobMod..AlwaysOnTop(False)
+
+F.Intrinsic.String.LPad(V.Local.sType,"0",5,V.Local.stype)
+
+F.Global.DocumentControl.CreateReference(V.Local.sKey,V.local.sType,V.local.iRef)
+
+Function.Global.General.SetPassedDataElement("DATA-LINK-TYPE",V.Local.sType)
+Function.Global.General.SetPassedDataElement("DATA-LINK-KEY",V.Local.sKey)
+Function.Global.General.SetPassedDataElement("DATA-LINK-DESC",V.Local.sDesc)
+
+F.Intrinsic.String.Build("{0}\ATG_DocumentControl.g2u",V.Caller.GASDir,V.Local.sDocContPath)
+
+F.Global.General.CallSyncGAS(V.Local.sDocContPath)
+
+Gui.fmJobMod..AlwaysOnTop(True)
+
+F.Intrinsic.Control.CallSub(DocIcon)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.DocLink.End
+
+Program.Sub.SetIcon.Start
+F.Intrinsic.Control.Try
+V.Local.sForm.Declare
+V.Local.bExists.Declare
+V.Local.bExistsGrn.Declare
+V.Local.sIcon.Declare
+V.Local.iCounter.Declare
+V.Local.sUplImgBlk.Declare
+V.Local.sUplImgGrn.Declare
+
+F.Intrinsic.String.Build("{0}\ART\gss2.ico",V.Caller.GlobalDir,v.Local.sIcon)
+F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+F.Intrinsic.Control.If(V.Local.bExists.Not)
+    F.Intrinsic.String.Build("{0}\GAB\GAS\gss2.ico",V.Caller.PluginsDir,v.Local.sIcon)
+    F.Intrinsic.File.Exists(V.Local.sIcon, V.Local.bExists)
+    F.Intrinsic.Control.If(V.Local.bExists.Not)
+        F.Intrinsic.Control.ExitSub
+    F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.EndIf
+
+Gui.fmJobMod.cmdHImgUp.Caption("LNK IMG")
+Gui.fmJobMod.cmdLImgUp.Caption("LNK IMG")
+
+F.Intrinsic.UI.GetFormList(V.Local.sForm)
+F.Intrinsic.String.Split(V.Local.sForm, "*!*", V.Local.sForm)
+
+F.Intrinsic.Control.For(V.Local.iCounter, 0, V.Local.sForm.UBound, 1)
+    Gui.[V.Local.sForm(V.Local.iCounter)]..Icon(V.Local.sIcon)
+F.Intrinsic.Control.Next(V.Local.iCounter)
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.SetIcon.End
+
+Program.Sub.DocIcon.Start
+F.Intrinsic.Control.Try
+V.Local.sUplImgGrn.Declare
+V.Local.bExistsGrn.Declare
+V.Local.sRet.Declare
+
+'Standard document linking icons are too small.  Establishing custom icons (buttons)
+F.Intrinsic.Control.If(V.ODBC.conts.Exists,=,0)
+	F.ODBC.Connection!conts.OpenCompanyConnection
+F.Intrinsic.Control.EndIf
+F.Intrinsic.String.Build("Select * from LINK_DATA where ID = '{0}'",V.Global.sWO,V.Local.sRet)
+F.ODBC.Connection!conts.ExecuteAndReturn(V.Local.sRet,V.Local.sRet)
+F.ODBC.Connection!conts.Close
+F.Intrinsic.Control.If(V.Ambient.ExecuteAndReturnEOF)
+	Gui.fmJobMod.cmdHImgUp.BackColor(16744576)
+	Gui.fmJobMod.cmdHImgUp.Caption("LNK IMG")
+F.Intrinsic.Control.Else
+	Gui.fmJobMod.cmdHImgUp.BackColor(49152)
+	Gui.fmJobMod.cmdHImgUp.Caption("IMG LNK")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Catch
+	F.Intrinsic.Control.CallSub(Error,"SubRoutine",V.Ambient.CurrentSubroutine,"eNumber",V.Ambient.ErrorNumber,"eDescription",V.Ambient.ErrorDescription)
+F.Intrinsic.Control.EndTry
+Program.Sub.DocIcon.End
+
+Program.Sub.fmEmailMX_UnLoad.Start
+F.Intrinsic.Control.End
+Program.Sub.fmEmailMX_UnLoad.End
+
+Program.Sub.fmJobMod_UnLoad.Start
+F.Intrinsic.Control.End
+Program.Sub.fmJobMod_UnLoad.End
+
+Program.Sub.Error.Start
+V.Local.sError.Declare
+V.Local.iRet.Declare
+V.Local.sSep.Declare
+
+F.Intrinsic.String.Build("-------------------------------------------------------------------------------------",,V.Local.sSep)
+F.Intrinsic.String.Build("({5}-{6}){0}{7}{0}Project: {4}{0}{7}{0}Sub: {1}{0}Error: {2}, {3}", V.Ambient.NewLine, V.Args.SubRoutine, V.Args.eNumber, V.Args.eDescription,V.Caller.ScriptFile,V.Ambient.Date, V.Ambient.Time,V.Local.sSep,V.Local.sError)
+F.Intrinsic.UI.Msgbox(V.Local.sError,"Error",V.Local.iRet)
+Program.Sub.Error.End
+
+Program.Sub.Comments.Start
+${$5$}$2.0.0.0$}$2
+${$6$}$tsmith$}$20210330060158756$}$xqPbj9atw05FglvzeFsZ9cqXP+qvG6tXE6/AkjdOsfYSW72G5cEQi+IIIGbNl/h8D9HLz8FZBBk=
+Program.Sub.Comments.End
